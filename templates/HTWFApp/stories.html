@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <th>Title</th>
+        <th>Author</th>
+    </thead>
+{% for story in data %}
+<tr>
+    <td>{{story.title|title}}</td>
+    <td>{{story.author.name|title}}</td>
+    <td><a href="{% url 'story' id=story.id %}"><button>View Story</button></a></td>
+</tr>
+{% endfor %}
+
+</table>
+{% endblock content %}

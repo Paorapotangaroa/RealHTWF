@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock title %}
+{% block content %}
+<div class="intro">
+    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/friends.jpg'%}" alt="..." />
+    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">My Story</span>
+            {% comment %} <span class="section-heading-lower">Worth Drinking</span> {% endcomment %}
+        </h2>
+        <p class="mb-3">In his book "How To Win Friends & Influence People" Dale Carnegie said, "Learning is an active process. We learn by doing. So, if you desire to master the principles you are studying in this book, do something about them. Apply these rules at every opportunity"</p>
+        <p>I've recorded some of my stories here in hopes it will help others develop a love of these principles</p>
+        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{% url 'stories' %}">Read Stories!</a></div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Story: {{story.title}}
+{% endblock title %}
+{% block content %}
+<div class="container">
+<h1 style="color:white; text-decoration:underline; text-align: center;">{{story.title|title}}</h1>
+<br>
+<h5 style="color:white">Author: {{story.author.name}}</h5>
+<br>
+{% for p in data %}
+<p style="color:white">{{p.text}}</p>
+{% endfor %}
+</div>
+{% endblock content %}
